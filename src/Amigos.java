@@ -13,6 +13,7 @@ public class App {
             return;
         } 
         System.out.println(Math.max (2, inicio));
+        boolean encontrado = false;
         for (int i = Math.max (2, inicio) ; i<Fin ; i++) {
             int contadorDivisores = 0; //2
             int primerDivisor = 0; //1
@@ -21,14 +22,22 @@ public class App {
                 if ( i % j == 0 ) {
                     contadorDivisores ++ ;
                     if (contadorDivisores == 1) {
-                        primerDivisor ++;
+                        primerDivisor =j;
                     } else if (contadorDivisores == 2) {
-                        SegundoDivisor ++;
+                        SegundoDivisor =j;
                     } else {
                         break;
                     }
                 }
             }
+            if (contadorDivisores == 2) {
+                encontrado = true;
+                System.out.println(i + "número amigo" + primerDivisor + SegundoDivisor);
+            }
         }
+        if ( !encontrado ) {
+            System.out.println("No se encpontraron números amigos");
+        }
+        input.close();
     }
 }
