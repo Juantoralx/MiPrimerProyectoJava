@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class App {
+public class EjercicioAmigos {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Ingresa el num de inicio");
@@ -36,7 +36,7 @@ public class App {
             }
         }
         if ( !encontrado ) {
-            System.out.println("No se encpontraron números amigos");
+            System.out.println("No se encontraron números amigos");
         }
         input.close();
     }
